@@ -8,7 +8,8 @@ const bookSchema = new mongoose.Schema({
         required: true
     },
     category: String,
-    author: String
+    author: String,
+    count: Number
 })
 
 const Book = mongoose.model('book', bookSchema);

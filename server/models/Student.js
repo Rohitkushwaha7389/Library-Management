@@ -16,10 +16,12 @@ const studentSchema = new mongoose.Schema({
     },
     card: {
         type: Boolean,
-        required: true
+        required: true, 
+        default: false
     }
 });
 
 const Student = mongoose.model('student', studentSchema);
 
 export default Student;
+
