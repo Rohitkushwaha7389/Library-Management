@@ -1,14 +1,22 @@
 import mongoose from "mongoose";
 
 const studentSchema = new mongoose.Schema({
-    name: String,
+    name: {
+        type:String,
+        required: true
+    },
     enrollno: {
         type: String,
+        required: true,
         unique: true
-    },   
+    },
     password: {
-        min: 4,
-        max: 16
+        type:String,
+        required: true
+    },
+    card: {
+        type: Boolean,
+        required: true
     }
 });
 

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const connectDB = async () => {
-    const uri = 'mongodb://127.0.0.1:27017/ecom';
+    const uri = 'mongodb://127.0.0.1:27017/CollegeDB';
 
     mongoose.connect(uri, {
         useNewUrlParser: true,
