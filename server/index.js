@@ -270,7 +270,8 @@ app.post('/register', async (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log('server has been started on port 3000');
+const port = 3001
+app.listen(port, () => {
+    console.log('server has been started on port', port);
     connectDB();
 });
