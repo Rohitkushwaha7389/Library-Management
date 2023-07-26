@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser"; "body-parser";
 import connectDB from "./config/connection.js";
-
+import cors from "cors";
 import Admin from "./models/Admin.js";
 import Student from "./models/Student.js";
 import Book from "./models/Book.js";
@@ -11,7 +11,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
-
+app.use(cors());
 
 // operations on books 
 

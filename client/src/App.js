@@ -10,10 +10,18 @@ function Login() {
   function handleLogin() {
     console.log(username, password);
 
-    fetch("http://localhost:3001"{
+    fetch("http://localhost:3001", {
+      method: "POST",
       headers : {
-        
-      }
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({username, password})
+    })
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err)=>{
+      console.log(err);
     })
   }
 
